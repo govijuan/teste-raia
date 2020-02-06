@@ -33,3 +33,72 @@ body {
 /**
 * YOUR CODE HERE
 */
+.logo{
+    max-width: 40px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    display: block;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #F3F3F3;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px 0 15px 0;
+}
+
+.form-group {
+    padding: 0 0 10px;
+    width: 100%;
+}
+.form-group input {
+    width: 100%;
+    background-color: #E0E0E0;
+    border-radius: 2px;
+    border: none;
+    height: 40px;
+    padding: 8px 15px;
+}
+input[type=submit] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    background-color: #28842A;
+    color: white;
+}
+
+ul.container li{
+    background-color: #F3F3F3;
+    padding: 15px;
+    margin: 5px;
+    display: inline-flex;
+}
+
+ul.container{
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.avatar-cont{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.avatar-cont img{
+    width: 100%;
+    display: block;
+}
+.user-name{
+    line-height: 30px;
+    margin-left: 10px;
+}
