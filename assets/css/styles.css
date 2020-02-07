@@ -33,6 +33,31 @@ body {
 /**
 * YOUR CODE HERE
 */
+
+#app {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    transition: padding-top 0.8s ease-out;
+}
+
+.logged {
+    justify-content: flex-start!important;
+    padding-top: 15px!important;
+}
+
+
+.login {
+    height: auto;
+    transition: height 0.5s ease-in-out;
+    display: block;
+    margin: 15px 0 0;
+}
+
+.logged .login{
+    height: 0!important;
+}
+
 .logo{
     max-width: 40px;
     height: auto;
@@ -41,6 +66,9 @@ body {
     margin-bottom: 15px;
     display: block;
 }
+
+/* Login Form Styles */
+
 form {
     display: flex;
     flex-direction: column;
@@ -57,14 +85,17 @@ form {
     padding: 0 0 10px;
     width: 100%;
 }
-.form-group input {
+
+.login input {
     width: 100%;
     background-color: #E0E0E0;
     border-radius: 2px;
     border: none;
     height: 40px;
     padding: 8px 15px;
+    margin-bottom: 10px;
 }
+
 input[type=submit] {
     width: 100%;
     height: 40px;
@@ -74,18 +105,44 @@ input[type=submit] {
     color: white;
 }
 
-ul.container li{
-    background-color: #F3F3F3;
-    padding: 15px;
-    margin: 5px;
-    display: inline-flex;
+input[type=submit]:disabled {
+    background-color: #E0E0E0!important;
 }
+
+input[type=submit]:hover, input[type=submit]:active {
+    background-color: #3CA31B ;
+}
+
+/* Users List Styles */
 
 ul.container{
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.container li{
+    background-color: #FFFFFF;
+    padding: 4px 8px;
+    margin: 5px;
+    display: inline-flex;
+    height: 38px;
+    flex-grow: 1;
+    border-radius: 4px;
+}
+
+ul.container li a{
+    display: flex;
+    color: #888888;
+}
+
+ul.container li:hover .avatar-cont{
+    filter: grayscale(0%);
+    width: 60px;
+    height: 60px;
+    margin-top: -15px
 }
 
 .avatar-cont{
@@ -93,7 +150,12 @@ ul.container{
     width: 30px;
     border-radius: 100%;
     overflow: hidden;
+    filter: grayscale(100%);
+    margin-top: 0;
+    position: relative;
+    transition: filter 0.5s ease, width 0.5s ease, height 0.5s ease, margin-top 0.5s ease;
 }
+
 .avatar-cont img{
     width: 100%;
     display: block;
@@ -101,4 +163,13 @@ ul.container{
 .user-name{
     line-height: 30px;
     margin-left: 10px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 767px) {
+    ul.container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
 }
