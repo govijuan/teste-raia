@@ -60,7 +60,6 @@
             .catch( err => console.log('Erro na requisição da URL primária -- erro:' + err));
 
         const fakeJwtToken = `${btoa(email+password)}.${btoa(data.url)}.${(new Date()).getTime()+300000}`;
-        /* trecho omitido */
         if(data !== undefined){
             sessionStorage.setItem('token', fakeJwtToken)
             Form.classList.add('disabled-form');

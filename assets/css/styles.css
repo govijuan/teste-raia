@@ -173,3 +173,10 @@ ul.container li:hover .avatar-cont{
         padding: 0 15px;
     }
 }
+
+@media (max-width: 430px){
+    #app {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
